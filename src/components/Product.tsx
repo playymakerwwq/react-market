@@ -125,15 +125,6 @@ export default class Product extends React.Component<Props, State>{
                                     <span>Add to favorites</span>
                                 </button>
                             </div>
-                            {/* <div className={product_style.product__container_product_addToBasketCounter}>
-                                <button onClick={this.decreaseAmount}>
-                                    -
-                                </button>
-                                <div>{this.state.itemCounter}</div>
-                                <button onClick={this.increaseAmount}>
-                                    +
-                                </button>
-                            </div> */}
                             <div className={product_style.product__container_product_addToBasket}>
                                 <button onClick={this.addToBasket}>
                                     Add to busket
