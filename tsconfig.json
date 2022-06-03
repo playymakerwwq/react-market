@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "outDir": "public",
+      "noImplicitAny": true,
+      "module": "esnext",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "suppressImplicitAnyIndexErrors": true,
+    },
+    "include": ["src", "src/static"]
+}

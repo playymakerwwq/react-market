@@ -1,0 +1,75 @@
+@charset "utf-8";
+$bodycolor: rgb(38, 36, 36);
+$buttoncolor: rgb(56, 50, 50);
+$textcolor: rgb(230, 224, 224);
+@import url("https://fonts.googleapis.com/css2?family=Kanit");
+.user__content {
+    width: 100%;
+    height: 500px;
+}
+
+.user__content_background_image {
+    width: 100%;
+    height: 450px;
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: 0% 0%;
+    }
+}
+
+.user__content_avatar_image {
+    width: 100%;
+    height: 125px;
+    div {
+        width: 350px;
+        height: 200px;
+        margin: auto auto auto auto;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top: -100px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
+
+.user__content_name {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+    div {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 100%;
+        span {
+            align-self: center;
+        }
+    }
+}
+
+.user__content_background_image_buttons {
+    width: 100%;
+    display: none;
+    button {
+        margin-left: 15px;
+    }
+    label {
+        display: flex;
+        margin-left: 15px;
+        background: $buttoncolor;
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+}

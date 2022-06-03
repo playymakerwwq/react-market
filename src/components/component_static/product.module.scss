@@ -1,0 +1,210 @@
+@charset "utf-8";
+$maincolor: rgb(236, 68, 68);
+$navbarcolor: rgb(55, 55, 55);
+.product__main {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 150px 50px 150px;
+    margin-top: 80px;
+}
+
+.product__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.product__container_image_preview {
+    width: 450px;
+    height: 450px;
+    border: 5px solid $maincolor;
+    border-radius: 10px;
+    img {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+.product__container_product {
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product__container_product_baseinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__container_product_title {
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    display: flex;
+    margin-left: 75px;
+}
+
+.product__container_product_price {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: 75px;
+}
+
+.product__container_product_available {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    margin-left: 75px;
+}
+
+.product__container_product_actions {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    flex-direction: row;
+    margin-left: 75px;
+}
+
+.product__container_product_buyNow {
+    display: flex;
+    // width: 150px;
+    padding-left: 10px;
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-image: linear-gradient($navbarcolor 0%, $maincolor 0%);
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size .25s;
+        span {
+            display: flex;
+            font-size: 15px;
+        }
+    }
+    button:hover {
+        background-size: 100% 100%;
+    }
+}
+
+.product__container_product_addToFavorite {
+    display: flex;
+    width: 150px;
+    padding-left: 10px;
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 150px;
+        span {
+            display: flex;
+            font-size: 15px;
+        }
+    }
+}
+
+.product__container_product_addToBasket {
+    display: flex;
+    padding-left: 10px;
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-image: linear-gradient($navbarcolor 0%, $maincolor 0%);
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size .25s;
+    }
+    button:hover {
+        background-size: 100% 100%;
+    }
+}
+
+.product__container_product_addToBasketCounter {
+    display: flex;
+    padding-left: 10px;
+    button {
+        width: 38px;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.product__container_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.product_container_info_description {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    border: 1px solid $maincolor;
+    border-radius: 15px;
+    padding: 25px 25px 25px 25px;
+}
+
+.product__container_info_characteristics {
+    margin-top: 50px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    border: 1px solid $maincolor;
+    border-radius: 15px;
+    padding: 25px 25px 25px 25px;
+}
+
+.product__container_info_characteristics_first_column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div {
+        padding: 15px 15px 15px 15px;
+    }
+}
+
+.product__container_info_characteristics_second_column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div {
+        padding: 15px 15px 15px 15px;
+    }
+}
+
+.toastBody {
+    color: #444C63;
+    background: $maincolor !important;
+    line-height: 20px;
+    padding: 0px;
+    width: 100%;
+    font-weight: 400;
+    font-family: Kanit, sans-serif;
+    div {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+.toastContainer {
+    background: $maincolor !important;
+}
+
+.toastProgress {
+    background: #333F48 !important;
+}
