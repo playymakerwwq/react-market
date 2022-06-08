@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BrowserRouter, Routes, Route, useParams, Navigate } from 'react-router-dom'
+import { Routes, Route, useParams } from 'react-router-dom'
 import { toast, Slide, ToastContainer } from 'react-toastify'
 
 import Profile from './Profile'

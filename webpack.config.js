@@ -1,6 +1,10 @@
 const path = require('path');
 module.exports = {
     entry: './src/index.tsx',
+    performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
     module: {
         rules: [{
                 test: [/\.css$/, /\.scss$/, ],

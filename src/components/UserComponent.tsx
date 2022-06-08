@@ -1,6 +1,5 @@
 import * as React from "react";
 import usercontent_style from './component_static/usercontent.module.scss'
-import jsonData from "./interfaces/Clients.json"
 
 let imageBackgroundPosY = 0;
 let timerdown: NodeJS.Timer;

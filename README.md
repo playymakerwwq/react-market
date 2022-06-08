@@ -1,4 +1,6 @@
 # react-market
+***Still in development!***
+
 first project made with react/sass
 
 Can be used to learn some simple things or 
@@ -34,4 +36,4 @@ Modules that was used in project
 ```
 
 # P.S
-some things could not work properly because i didn't make a database for this project (as well as in general any backend things xd)
+1. Some things could not work properly because i didn't make a database for this project (as well as in general any backend things xd)
