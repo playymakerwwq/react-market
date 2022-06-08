@@ -29,4 +29,3 @@ Modules that was used in project
         "webpack": "^5.72.0",
         "webpack-cli": "^4.9.2"
 ```
-
