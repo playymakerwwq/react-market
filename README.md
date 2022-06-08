@@ -29,3 +29,6 @@ Modules that was used in project
         "webpack": "^5.72.0",
         "webpack-cli": "^4.9.2"
 ```
+
+# P.S
+some things could not work properly because i didn't make a database for this project (as well as in general any backend things xd)

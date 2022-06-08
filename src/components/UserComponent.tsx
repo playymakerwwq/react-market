@@ -178,15 +178,25 @@ export default class UserComponent extends React.Component<userProps, userCompon
         this.state.avatarImage,
         this.state.avatarImage.name
       );
-      // let pos = jsonData.users.map((e) => e.id).indexOf(Number(localStorage.getItem('user_id')))
 
       image.src = this.state.avatarImageUrl
       image.style.objectPosition = "50% 50%"
     }
   }
 
+  saveBackgroundImagePos = () => {
+    let backgroundImage = document.getElementsByClassName(`${usercontent_style.user__content_background_image} image`)[0] as HTMLImageElement
+    this.setCookieValue('background_pos', backgroundImage.style.objectPosition, 30)
+  }
+
   componentDidMount(){
     let image = document.getElementsByClassName(`${usercontent_style.user__content_avatar_image} avatar_image`)[0] as HTMLImageElement
+    let backgroundImage = document.getElementsByClassName(`${usercontent_style.user__content_background_image} image`)[0] as HTMLImageElement
+
+    if (this.getCookie('background_pos') != undefined){
+      backgroundImage.style.objectPosition = this.getCookie('background_pos')
+    }
+
     this.setCookieValue('avatar_image', image.src, 30)
     this.moveBackgroundEvent();
   }
@@ -213,7 +223,10 @@ export default class UserComponent extends React.Component<userProps, userCompon
               onChange={(e) => this.onImageChange(e, true)} 
               accept=".png, .jpg, .jpeg, .gif"
               hidden/>
-              <button id={`${usercontent_style.user__content_background_image_buttons} button_save`} style={{display: "none"}}>save</button>
+              <button id={`${usercontent_style.user__content_background_image_buttons} button_save`} 
+              style={{display: "none"}}
+              onClick={this.saveBackgroundImagePos}
+              >save</button>
             </div>
           </div>
           <div className={`${usercontent_style.user__content_avatar_image}`}>

@@ -60,6 +60,7 @@ export default class Basket extends React.Component<Props, State>{
     }
 
     componentDidMount() {
+        console.log(this.getCookie('basket_products'))
         if (this.getCookie('basket_products') != undefined){
             let arrCookie: ProductsArray = JSON.parse(this.getCookie('basket_products'));
             if (this.state.products.products.length == 0){

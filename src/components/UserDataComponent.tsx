@@ -41,13 +41,31 @@ export default class UserDataComponent extends React.Component<Props, State>{
         super(props)
     }
 
+    getCookie = (cName: string) => {
+        const name = cName + "=";
+        const cDecoded = decodeURIComponent(document.cookie); //to be careful
+        const cArr = cDecoded .split('; ');
+        let res;
+        cArr.forEach(val => {
+            if (val.indexOf(name) === 0) res = val.substring(name.length);
+        })
+        return res;
+    }
+
+    setCookieValue = (variable: string, value: string, expDays: number) => {
+        let date = new Date()
+        date.setTime(date.getTime() + expDays * 24 * 60 * 60 * 1000)
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = variable + "=" + value + "; " + expires + "; path=/"
+    }
+
     state: State = {
         inputValueName: this.props.data.name,
         inputValueLastName: this.props.data.lastname,
         inputValueAge: this.props.data.age,
         inputValuePhonenumber: this.props.data.phonenumber,
         inputValueAdress: this.props.data.street,
-        inputValueEmail: this.props.data.email
+        inputValueEmail: this.props.data.email,
     }
 
     changeValue = (e: React.FormEvent<HTMLInputElement>, input: any) => {
@@ -70,10 +88,17 @@ export default class UserDataComponent extends React.Component<Props, State>{
             case "user__email":
                 this.setState({inputValueEmail: e.currentTarget.value})
                 break
-        }
-            
+        }       
     }
-    
+
+    saveUserData = () => {
+        let userData = [
+            this.state.inputValueName, this.state.inputValueLastName, this.state.inputValueAge,
+            this.state.inputValuePhonenumber, this.state.inputValueAdress, this.state.inputValueEmail
+        ]
+        this.setCookieValue('userData', JSON.stringify(userData), 30)
+    }
+
     render(){
         return(
             <div className={userdata_style.main__userinfo}>
@@ -134,7 +159,7 @@ export default class UserDataComponent extends React.Component<Props, State>{
                     </div>
                 </div>
                 <div className={userdata_style.main__userinfo_content_savebtn}>
-                    <div onClick={() => {saveToast()}}>
+                    <div onClick={() => {saveToast(); this.saveUserData()}}>
                         <span>save</span>
                     </div>
                 </div>

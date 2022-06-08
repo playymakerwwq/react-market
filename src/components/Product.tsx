@@ -43,6 +43,13 @@ export default class Product extends React.Component<Props, State>{
         itemCounter: this.props.productValues.amountInBasket,
     }
 
+    setCookieValue = (variable: string, value: string, expDays: number) => {
+        let date = new Date()
+        date.setTime(date.getTime() + expDays * 24 * 60 * 60 * 1000)
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = variable + "=" + value + "; " + expires + "; path=/"
+    }
+
     checkAvailable = () => {
         if (this.props.productValues.available){
             return <span 
@@ -90,6 +97,7 @@ export default class Product extends React.Component<Props, State>{
         if (this.props.productValues.available){
             this.props.updateBasket(this.props.productValues.id)
         }
+        this.setCookieValue('basket_products', JSON.stringify(this.props), 30)
     }
 
     render(){

@@ -11,6 +11,7 @@ type Props = {productInfo : ProductsValues,
     updatePrice: (increase: boolean) => void,
     updateAmount: (mode: boolean, id: number) => void,
 }
+
 type State = {itemCounter: number}
 
 // https://qna.habr.com/q/877303
@@ -22,6 +23,10 @@ export default class SmallItem extends React.Component<Props, State>{
 
     state: State = {
         itemCounter: this.props.productInfo.amountInBasket
+    }
+
+    componentDidMount(): void {
+        console.log(this.props.productInfo.productImage)
     }
 
     increaseAmount = () => {
