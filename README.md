@@ -1,6 +1,9 @@
 # react-market
 first project made with react/sass
 
+Can be used to learn some simple things or 
+start understand any simple mistakes that i would change someday (no)
+
 Modules that was used in project
 ```
         "@emotion/react": "^11.9.0",
