@@ -1,0 +1,8 @@
+@charset 'utf-8';
+$maincolor: rgb(236, 68, 68);
+.main__container {
+    width: 250px;
+    height: 100px;
+    background: $maincolor;
+    display: none;
+}

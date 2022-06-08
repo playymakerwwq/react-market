@@ -1,0 +1,128 @@
+@charset "utf-8";
+$bodycolor: rgb(38, 36, 36);
+$maincolor: rgb(236, 68, 68);
+.main__container {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+}
+
+.main__container_categories {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main__container_categories_settings {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-right: 15px;
+    align-self: flex-start;
+    justify-content: flex-end;
+}
+
+.main__container_setting {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    cursor: pointer;
+    span {
+        display: flex;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.main__container_categories_search {
+    display: flex;
+    width: 550px;
+    height: 100%;
+    align-items: flex-start;
+    div {
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        span {
+            text-align: center;
+            font-size: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.search {
+    width: 100%;
+    height: 34px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    resize: none;
+    background: $bodycolor;
+    font-size: 15px;
+    font-family: Kanit, sans-serif;
+    border-bottom: 1px solid black;
+    text-align: left;
+    color: white;
+}
+
+.search:read-write:focus {
+    outline: none;
+}
+
+.main__container_settings_container {
+    display: flex;
+    span {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.main__container_setting input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background-color: #d5d5d5;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+// .main__container_setting input[type="checkbox"]:checked {
+//     background-color: green;
+// }
+.main__container_products {
+    display: flex;
+    height: 100%;
+    justify-content: left;
+    align-items: flex-start;
+    flex-flow: wrap;
+    padding: 0px 20px 0px 20px;
+}
+
+.main__container_products_not_found {
+    width: 100%;
+    height: 400px;
+    display: none;
+}
+
+.main__container_products_not_found_container {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__container_products_not_found_title {
+    font-size: 35px;
+}
+
+.main__container_products_not_found_description {
+    font-size: 16px;
+}

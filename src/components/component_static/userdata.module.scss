@@ -1,0 +1,131 @@
+@charset 'utf-8';
+@import url(https://fonts.googleapis.com/css2?family=Kanit);
+$bodycolor: rgb(38, 36, 36);
+$navbarcolor: rgb(55, 55, 55);
+$buttoncolor: rgb(56, 50, 50);
+$textcolor: rgb(230, 224, 224);
+$maincolor: rgb(236, 68, 68);
+.main__userinfo {
+    width: 100%;
+    height: 600px;
+    margin-top: 175px;
+    background: $bodycolor;
+}
+
+.main__userinfo_content {
+    background: $bodycolor;
+    width: auto;
+    height: 200px;
+    padding: 75px 75px 75px 75px;
+    display: flex;
+}
+
+.main__userinfo_content_firsthalf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 25px 25px 25px 25px;
+        label {
+            font-size: 20px;
+            text-align: left;
+        }
+        input {
+            width: auto;
+            height: 25px;
+            border: none;
+            margin-left: 20px;
+            background: $bodycolor;
+            border-bottom: 1px solid $maincolor;
+            font-family: Kanit, sans-serif;
+            font-size: 19px;
+            color: white;
+            text-align: center;
+            outline: none;
+        }
+        input[type="text"] {
+            padding: 0;
+        }
+    }
+}
+
+.main__userinfo_content_secondhalf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    div {
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 25px 25px 25px 25px;
+            label {
+                font-size: 20px;
+                text-align: left;
+            }
+            input {
+                width: auto;
+                height: 25px;
+                border: none;
+                margin-left: 20px;
+                background: $bodycolor;
+                border-bottom: 1px solid $maincolor;
+                font-family: Kanit, sans-serif;
+                font-size: 19px;
+                color: white;
+                text-align: center;
+                outline: none;
+            }
+            input[type="text"] {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.main__userinfo_content_savebtn {
+    width: 250px;
+    height: 100px;
+    margin: auto auto auto auto;
+    div {
+        margin: auto auto auto auto;
+        width: 150px;
+        height: 40px;
+        font-size: 20px;
+        text-align: center;
+        background-image: linear-gradient($navbarcolor 0%, $maincolor 0%);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size .3s;
+        cursor: pointer;
+    }
+    div:hover {
+        background-size: 100% 100%;
+    }
+}
+
+.toastBody {
+    color: #444C63;
+    background: $maincolor !important;
+    line-height: 20px;
+    padding: 0px;
+    width: 100%;
+    font-weight: 400;
+    font-family: Kanit, sans-serif;
+    div {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+.toastContainer {
+    background: $maincolor !important;
+}
+
+.toastProgress {
+    background: #333F48 !important;
+}

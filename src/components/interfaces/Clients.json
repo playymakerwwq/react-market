@@ -1,0 +1,27 @@
+{
+    "users": [{
+        "id": 0,
+        "name": "senka",
+        "password": "123",
+        "lastname": "golub",
+        "age": "16",
+        "phonenumber": "+79273922186",
+        "street": "Kalinina 76",
+        "email": "senkagolub@gmail.com",
+        "isloggedin": true,
+        "backgroundImage": "http://127.0.0.1:5500/src/components/interfaces/images/testbackground.jpg",
+        "avatarImage": "http://127.0.0.1:5500/src/components/interfaces/images/testavatar2.jpg"
+    }, {
+        "id": 1,
+        "name": "arthur",
+        "password": "123",
+        "lastname": "golub",
+        "age": "21",
+        "phonenumber": "+79273922186",
+        "street": "Kalinina 76",
+        "email": "senkagolub@gmail.com",
+        "isloggedin": true,
+        "backgroundImage": "http://127.0.0.1:5500/src/components/interfaces/images/testbackground2.jpg",
+        "avatarImage": "http://127.0.0.1:5500/src/components/interfaces/images/testavatar2.jpg"
+    }]
+}

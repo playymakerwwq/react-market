@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "outDir": "public",
+      "noImplicitAny": true,
+      "module": "esnext",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
+      "suppressImplicitAnyIndexErrors": true,
+    },
+    "include": ["src", "src/static"]
+}

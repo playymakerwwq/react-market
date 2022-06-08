@@ -1,0 +1,123 @@
+@charset 'utf-8';
+$bodycolor: rgb(38, 36, 36);
+$buttoncolor: rgb(56, 50, 50);
+$textcolor: rgb(230, 224, 224);
+$maincolor: rgb(236, 68, 68);
+body,
+html {
+    display: flex;
+    flex-direction: column;
+    background: $bodycolor;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.root {
+    width: 100%;
+    height: 100%;
+}
+
+p,
+a,
+span,
+div,
+h1 {
+    font-family: Kanit, sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+    color: $textcolor;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+button {
+    display: table-cell;
+    width: 100px;
+    height: 30px;
+    background: $buttoncolor;
+    border: none;
+    padding: 0;
+    vertical-align: middle;
+    font-family: Kanit, sans-serif;
+    font-size: 15px;
+    color: $textcolor;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    padding-inline-start: 0px;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    z-index: 10;
+}
+
+body::-webkit-scrollbar-track {
+    background: $buttoncolor;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $maincolor;
+    border-radius: 20px;
+}
+
+.page__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__wrap {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+section {
+    margin-top: 80px;
+}
+
+hr {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    border-color: $maincolor;
+}
+
+.toastBody {
+    color: #444C63;
+    background: $maincolor !important;
+    line-height: 20px;
+    padding: 0px;
+    width: 100%;
+    font-weight: 400;
+    font-family: Kanit, sans-serif;
+    div {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+.toastContainer {
+    background: $maincolor !important;
+}
+
+.toastProgress {
+    background: #333F48 !important;
+}

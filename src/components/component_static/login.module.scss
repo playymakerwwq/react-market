@@ -1,0 +1,103 @@
+@charset 'utf-8';
+$maincolor: rgb(236, 68, 68);
+$buttoncolor: rgb(56, 50, 50);
+.login__main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.login__main_logo {
+    width: 1000px;
+    height: 100%;
+    img {
+        width: 1000px;
+        height: 100%;
+    }
+}
+
+.login__main_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login__main_container_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login__main_container_title {
+    font-size: 40px;
+}
+
+.login__main_container_newAcc {
+    font-size: 14px;
+}
+
+.login__main_form {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+        width: 250px;
+        margin: 10px 0px 10px 0px;
+        border: none;
+        border-bottom: 1px solid black;
+        border-radius: 5px;
+        height: 30px;
+        outline: none;
+        font-family: Kanit, sans-serif;
+        text-align: center;
+        font-size: 17px;
+        color: white;
+        background: $buttoncolor;
+    }
+}
+
+.login__main_container_form_checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+        margin: 0;
+    }
+    span {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+}
+
+.login__main_login_button {
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient($buttoncolor 0%, $maincolor 0%);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .3s;
+}
+
+.login__main_login_button:hover {
+    background-size: 100% 100%;
+}
+
+.login__main_container_error {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    span {
+        font-size: 20px;
+    }
+}
